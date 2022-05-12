@@ -1,0 +1,563 @@
+
+/*INDEX*/
+
+.index-container {  
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.3fr;
+    grid-template-rows: 0.1fr 0.1fr 2.7fr 2fr 1fr 4fr 35px;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "margin__izquierdo navBar margin__derecho"
+    "margin__izquierdo index__Titulo__Container margin__derecho"
+    "margin__izquierdo index__VideoyTexto__Container margin__derecho"
+    "margin__izquierdo index__Suscripciones__Container margin__derecho"
+    "margin__izquierdo index__ManteneteActivado__Container margin__derecho"
+    "margin__izquierdo index__Contacto__Container margin__derecho"
+    "margin__izquierdo footer margin__derecho";
+}
+
+.navBar { 
+    grid-area: navBar;
+    background-color: $color-fondo;
+    .menuDeNavegacion li{
+        font-size:18px;
+    }
+    .menuDeNavegacion li a{
+        color:$color-tipografia;
+        text-decoration: none;
+        font-family: $tipografia-navBar;
+        flex-wrap: wrap;
+    }
+}
+
+.menuDeNavegacion{
+    @include flex-row-spaceAround;
+    list-style-type: none;
+    align-items: center;
+    background-color: $color-fondo;
+    padding-right: 30px;
+}
+
+.index__Titulo__Container { 
+    grid-area: index__Titulo__Container;
+    text-align: center;
+    text-shadow: 2rem;
+    font-size: 25px;
+    font-family: $tipografia-titulos;
+    font-weight: bolder;
+    background-color: $color-fondo;
+    color:$color-tipografia;
+    line-height: 50px;
+}
+
+.index__VideoyTexto__Container {
+    background-color:$color-fondo;
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.5fr 0.1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "index__Video__Container"
+    "index__Texto__Container"; 
+    grid-area: index__VideoyTexto__Container; 
+}
+
+.index__Video__Container { 
+    grid-area: index__Video__Container;
+    @include flex-row-spaceAround; 
+}
+
+.index__Texto__Container { 
+    grid-area: index__Texto__Container;
+    color: $color-tipografia-alternativa;
+    background-color: $color-fondo-alternativo;
+    font-family: $tipografia-textos;
+    width: 80%;
+    border-radius: 20px; 
+    margin-top: 50px;
+    margin-left: 90px;
+    font-size: 12px;
+}
+
+.index__Suscripciones__Container { 
+    grid-area: index__Suscripciones__Container;
+    background-color:$color-fondo; 
+}
+
+.suscripciones__titulo{
+    color: $color-tipografia;
+    font-size: 30px;
+    background-color: $color-fondo;
+    font-weight: bolder;
+    font-family: $tipografia-titulos;
+    display:flex;
+    justify-content:space-evenly;
+    text-align: center;
+}
+
+.suscripciones__parrafo{
+    color: $color-tipografia;
+    background-color: $color-fondo;
+    font-size: 12px;
+    font-family: $tipografia-formularios;
+    text-align: center;
+    font-size: 12px;
+}
+
+.suscripciones__email{
+    margin-top: 60px;
+    width: 200px;
+    height:20px;
+    background: linear-gradient(to left,silver,white);
+    color: $color-tipografia-formularios;
+    font-family: $tipografia-formularios;
+    font-size: 10px;
+}
+
+
+.suscripciones{
+    text-align: center;
+}
+
+.index__ManteneteActivado__Container { 
+    grid-area: index__ManteneteActivado__Container; 
+    background-color:$color-fondo;
+    border:black solid 2px;
+    text-align: center;
+    background-image: url(../img/LogoPicantitoAchicadoFondoNegro.png);
+    background-repeat: repeat;
+}
+
+.canales__titulo{
+    color: $color-tipografia;
+    font-size: 30px;
+    background-color:$color-fondo;
+    font-weight: bolder;
+    font-family: $tipografia-titulos;
+    text-align: center;
+}
+
+
+.index__Contacto__Container { 
+    grid-area: index__Contacto__Container;
+    background-color:$color-fondo; 
+}
+
+.contactoIndex__titulo{
+    @include flex-row-spaceAround;
+    font-family: $tipografia-titulos;
+    font-size: 30px;
+    color: $color-tipografia;
+}
+
+.contactoIndex__NuestroContacto{
+    color: white;
+    font-family: $tipografia-textos;
+    font-size: 12px;
+    ul{
+        @include flex-row-spaceAround;
+    }
+}
+
+
+.index__Contacto__Informacion{
+    @include flex-row-spaceAround;
+    align-items: flex-end;
+    input{
+        font-family: $tipografia-formularios;   
+    }    
+}
+
+.contactoIndex__Nombre #Nombre{
+    font-size:10px;
+}
+
+.contactoIndex__Email #Email{
+    font-size:10px;
+}
+
+.contactoIndex__Telefono #Telefono{
+    font-size:10px;
+}
+
+.contactoIndex__Asunto{
+    margin-top:50px;
+    width:20%;
+    height:40px;
+}
+
+
+.contactoIndex__Asunto #Asunto{
+    font-size:10px;
+    margin-left: 400px;
+}
+
+
+
+.contactoIndex__Mensaje{
+    @include flex-row-spaceAround;
+    margin-top: 40px;
+    textarea{
+        font-family: $tipografia-formularios;
+        font-size: 10px;
+        width: 600px;
+        height:200px;
+    }
+}
+
+.footer { 
+    grid-area: footer;
+    color: $color-tipografia-footer;
+    font-family: $tipografia-footer;
+    font-size: 10px;
+    background-color: $color-fondo-footer;
+    
+}
+
+.margin__izquierdo { 
+    grid-area: margin__izquierdo;
+    background-color:$color-fondo;
+}
+
+.margin__derecho { 
+    grid-area: margin__derecho;
+    background-color:$color-fondo; 
+}
+
+/*WORLD*/
+
+.World__Container {  
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.3fr;
+    grid-template-rows: 0.3fr 0.1fr 2fr 60px;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "margin__izquierdo navBar margin__derecho"
+    "margin__izquierdo World__Titulo__Container margin__derecho"
+    "margin__izquierdo World__AboutUs__Container margin__derecho"
+    "margin__izquierdo footer margin__derecho";
+    background-color:$color-fondo;
+}
+
+.World__Titulo__Container { 
+    grid-area: World__Titulo__Container;
+    background-color:$color-fondo;
+    p{
+        @include flex-row-spaceAround;
+        font-family: $tipografia-textos;
+        font-size: 35px;
+        color:$color-tipografia;
+    } 
+}
+
+.World__AboutUs__Container { 
+    grid-area: World__AboutUs__Container;
+    margin-top: 0px;
+    margin-left: 80px;
+    background-color:$color-fondo;
+}
+
+
+
+.world__Textos__1{
+    font-family: $tipografia-textos;
+    color: $color-tipografia;
+    background-color:$color-fondo;
+    width: 90%;
+    border-radius: 20px;
+    font-size: 12px;
+    h3{
+        font-size:35px;
+    }
+}
+
+
+
+.world__Textos__2{
+    font-family: $tipografia-textos;
+    color: $color-tipografia;
+    background-color:$color-fondo;
+    width: 90%;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 100px;
+    h3{
+        font-size:35px;
+    }
+}
+
+.world__Textos__3{
+    font-family: $tipografia-textos;
+    color: $color-tipografia;
+    background-color:$color-fondo;
+    width: 90%;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    h3{
+        font-size:35px;
+    }
+}
+
+/*INDOORS*/
+
+.indoors-container {  
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.3fr;
+    grid-template-rows: 0.3fr 0.2fr 1.5fr 4fr 50px;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "margin__izquierdo navBar margin__derecho"
+    "margin__izquierdo indoors__Titulo__Container margin__derecho"
+    "margin__izquierdo indoors__Subtitulos__Container margin__derecho"
+    "margin__izquierdo indoors__CapitulosyDescripciones__Container margin__derecho"
+    "margin__izquierdo footer margin__derecho";
+    background-color:$color-fondo;
+    h1{ 
+        grid-area: indoors__Titulo__Container;
+        @include flex-spaceEvenly;
+        color: $color-tipografia;
+        font-family: $tipografia-titulos;
+        font-size:35px;
+    }
+}
+
+.indoors__Subtitulos__Container{
+    @include flex-spaceEvenly;
+    align-content: space-around;
+    align-items: center;
+    select{
+        font-family: $tipografia-botones;
+        color: $color-tipografia-boton;
+        background-color:$color-fondo;
+        border: solid 2px white;
+        width:150px;
+        height:30px;
+        margin-top: 0;
+}
+}
+
+.episodios__titulo{
+    color: $color-tipografia;
+    font-family: $tipografia-titulos;
+}
+
+.indoors__Subtitulos__Container select{
+    font-family: $tipografia-botones;
+    color: $color-tipografia-boton;
+    background-color:$color-fondo;
+    border: solid 2px white;
+    width:150px;
+    height:50px;
+    font-size: 10px;
+}
+
+.indoors__CapitulosyDescripciones__Container {  
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 0.7fr 1.3fr ;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". indoors__temporada1__episodio1 ."
+    ". indoors__temporada1__descripcion1 .";
+    grid-area: indoors__CapitulosyDescripciones__Container;
+    .indoors__temporada1__episodio1 video{
+        display:flex;
+        align-items: flex-start;
+        justify-content:space-around;
+    }
+}
+
+.indoors__temporada1__episodio1 { 
+grid-area: indoors__temporada1__episodio1;
+@include flex-row-spaceAround;
+}
+
+
+.indoors__temporada1__descripcion1 { 
+    grid-area: indoors__temporada1__descripcion1;
+    color:$color-tipografia;
+    font-family: $tipografia-textos;
+    p{
+        font-size: 12px;
+    }
+}
+
+.indoors__descripcion1__titulo{
+    font-size: 35px;
+}
+
+/*GALERIA*/
+
+.gallery-container {  
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.3fr;
+    grid-template-rows: 0.4fr 0.4fr 3.5fr 0.7fr 35px;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "margin__izquierdo navBar margin__derecho"
+    "margin__izquierdo gallery__titulo__container margin__derecho"
+    "margin__izquierdo gallery__main__container margin__derecho"
+    "margin__izquierdo gallery__text__container margin__derecho"
+    "margin__izquierdo footer margin__derecho";
+    background-color:$color-fondo;
+}
+
+.gallery__titulo__container { 
+    grid-area: gallery__titulo__container;
+    color: $color-tipografia;
+    font-size: 20px;
+    h1{
+        font-family: $tipografia-titulos;
+        padding-left: 22rem;
+        font-size: 35px;
+    }
+}
+
+.gallery__main__container { 
+    grid-area: gallery__main__container;
+    display:flex;
+    flex-wrap: wrap; 
+    align-content: stretch;
+    justify-content: center;
+}
+
+.gallery__text__container { 
+    grid-area: gallery__text__container; 
+    color:$color-tipografia;
+}
+
+.gallery__text__container p{
+    display:flex;
+    font-family: $tipografia-textos;
+    font-size: 12px;
+    margin-top: 100px;
+    margin-left: 120px;
+    width:80%;
+}
+
+/*CONTACTO*/
+
+.contact-container {  
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.3fr;
+    grid-template-rows: 0.3fr 0.2fr 3.5fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "margin__izquierdo navBar margin__derecho"
+    "margin__izquierdo contact__title__container margin__derecho"
+    "margin__izquierdo contact__main__container margin__derecho"
+    "margin__izquierdo footer margin__derecho";
+    background-color:$color-fondo;
+}
+
+.contact__title__container { 
+    grid-area: contact__title__container; 
+}
+
+.contact__title{
+    @include flex-spaceEvenly;
+    color: $color-tipografia;
+    font-family: $tipografia-titulos;
+    font-size: 35px;
+}
+
+.contact__main__container { 
+    grid-area: contact__main__container; 
+}
+.contact__main__NuestroContacto{
+    @include flex-spaceEvenly;
+    color:$color-tipografia;
+    font-family: $tipografia-textos;
+    list-style-type: none;
+    align-content: stretch;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size:13px;
+}
+
+
+
+.seccionContactos__Nombre{
+    @include flex-spaceEvenly;
+
+}
+
+#Nombre{
+    width: 100%;
+    font-family: $tipografia-formularios;
+    font-size: 12px;
+}
+
+.seccionContactos__Mail{
+    @include flex-spaceEvenly;
+
+}
+
+#Mail{
+    width: 100%;
+    margin-top: 10px;
+    font-family: $tipografia-formularios;
+    font-size: 12px;
+}
+
+.seccionContactos__Telefono{
+    @include flex-spaceEvenly;
+
+}
+
+#Telefono{
+    width:100%;
+    margin-top: 10px;
+    font-family: $tipografia-formularios;
+    font-size:12px;
+}
+
+.seccionContactos__Empresa{
+    @include flex-spaceEvenly;
+
+}
+
+#Empresa{
+    width: 100%;
+    margin-top: 10px;
+    font-family: $tipografia-formularios;
+    font-size: 12px;
+}
+
+.seccionContactos__Asunto{
+   @include flex-spaceEvenly;
+
+}
+
+#Asunto{
+    width: 100%;
+    margin-top: 10px;
+    font-family: $tipografia-formularios;
+    font-size: 12px;
+}
+
+.seccionContactos__Mensaje{
+    @include flex-spaceEvenly;
+
+}
+
+#Mensaje{
+    width: 100%;
+    height:200px;
+    margin-top: 10px;
+    font-family: $tipografia-formularios;
+    font-size:12px;
+}

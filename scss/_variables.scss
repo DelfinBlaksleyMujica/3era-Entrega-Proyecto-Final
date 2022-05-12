@@ -1,0 +1,73 @@
+
+
+/*PALETA DE COLORES*/
+
+$color-fondo:black;
+$color-fondo-alternativo:white;
+$color-fondo-footer:rgb(63, 19, 104);
+
+$color-tipografia:white;
+$color-tipografia-alternativa:black;
+$color-tipografia-boton:white;
+$color-fondo-boton-hover:white;
+$color-tipografia-boton-hover:black;
+$color-tipografia-footer:white;
+$color-tipografia-formularios:black;
+
+
+/*TIPOGRAFIAS*/
+
+$tipografia-navBar:"Bungee";
+$tipografia-textos:"Bungee";
+$tipografia-titulos:"Bungee";
+$tipografia-formularios:"Bungee";
+$tipografia-botones:"Bungee";
+$tipografia-footer:"Bungee";
+
+/*MEDIA QUARIES*/
+
+$desktop:1200px;
+$tablet-horizontal:1024px;
+$tablet:768px;
+$tablet-pequeña:600px;
+$mobile-grande:480px;
+$mobile:320px;
+
+
+.boton{
+    font-family: $tipografia-botones;
+    color: $color-tipografia-boton;
+    background-color:$color-fondo;
+    border: solid 2px white;
+    width:150px;
+    height:50px;
+}
+
+@mixin flex-row-spaceAround {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    
+}
+
+@mixin flex-spaceEvenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*$separaciones: (
+    margen-superior:100px,
+    margen-izquierdo:60px,
+);*/
+
+/*$tFuentes:(
+    desktop:,
+    tablet-horizontal:,
+    tablet:,
+    tablet-pequeña:,
+    mobile-grande:,
+    mobile:,
+
+);*/
+

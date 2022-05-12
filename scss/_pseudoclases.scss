@@ -1,0 +1,24 @@
+.logoMenuDeNavegacion:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.navBar .menuDeNavegacion li .subrayado:hover{
+    border-bottom:solid 2px white;
+}
+
+
+/*INDOORS*/
+
+#episodios__selectTemporada:hover{
+    color: $color-tipografia-boton-hover;
+    background-color: $color-fondo-boton-hover;
+    border: solid 2px black;
+}
+
+/*GALLERY*/
+
+.gallery__main__container img:hover {
+    transform: scale(1.5);
+    transition:1s;
+}
