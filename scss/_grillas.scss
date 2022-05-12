@@ -4,7 +4,7 @@
 .index-container {  
     display: grid;
     grid-template-columns: 1.3fr 3fr 1.3fr;
-    grid-template-rows: 0.1fr 0.1fr 2.7fr 2fr 1fr 4fr 35px;
+    grid-template-rows: 0.1fr 0.1fr 2.7fr 2fr 1fr 35px;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -14,7 +14,6 @@
     "margin__izquierdo index__VideoyTexto__Container margin__derecho"
     "margin__izquierdo index__Suscripciones__Container margin__derecho"
     "margin__izquierdo index__ManteneteActivado__Container margin__derecho"
-    "margin__izquierdo index__Contacto__Container margin__derecho"
     "margin__izquierdo footer margin__derecho";
 }
 
@@ -139,73 +138,6 @@
     text-align: center;
 }
 
-
-.index__Contacto__Container { 
-    grid-area: index__Contacto__Container;
-    background-color:$color-fondo; 
-}
-
-.contactoIndex__titulo{
-    @include flex-row-spaceAround;
-    font-family: $tipografia-titulos;
-    font-size: 30px;
-    color: $color-tipografia;
-}
-
-.contactoIndex__NuestroContacto{
-    color: white;
-    font-family: $tipografia-textos;
-    font-size: 12px;
-    ul{
-        @include flex-row-spaceAround;
-    }
-}
-
-
-.index__Contacto__Informacion{
-    @include flex-row-spaceAround;
-    align-items: flex-end;
-    input{
-        font-family: $tipografia-formularios;   
-    }    
-}
-
-.contactoIndex__Nombre #Nombre{
-    font-size:10px;
-}
-
-.contactoIndex__Email #Email{
-    font-size:10px;
-}
-
-.contactoIndex__Telefono #Telefono{
-    font-size:10px;
-}
-
-.contactoIndex__Asunto{
-    margin-top:50px;
-    width:20%;
-    height:40px;
-}
-
-
-.contactoIndex__Asunto #Asunto{
-    font-size:10px;
-    margin-left: 400px;
-}
-
-
-
-.contactoIndex__Mensaje{
-    @include flex-row-spaceAround;
-    margin-top: 40px;
-    textarea{
-        font-family: $tipografia-formularios;
-        font-size: 10px;
-        width: 600px;
-        height:200px;
-    }
-}
 
 .footer { 
     grid-area: footer;
@@ -430,6 +362,9 @@ grid-area: indoors__temporada1__episodio1;
     flex-wrap: wrap; 
     align-content: stretch;
     justify-content: center;
+    img {
+        margin: 10px 10px;
+    }
 }
 
 .gallery__text__container { 
@@ -486,7 +421,12 @@ grid-area: indoors__temporada1__episodio1;
     flex-wrap: wrap;
     align-items: baseline;
     font-size:13px;
+    li a{
+        text-decoration: none;
+        color: $color-tipografia;
+    }
 }
+
 
 
 
